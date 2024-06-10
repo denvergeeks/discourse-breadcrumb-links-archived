@@ -35,6 +35,7 @@
       }
 
       &.active {
+          color: var(--primary-medium);
           font-weight: bold;
       }
   }
