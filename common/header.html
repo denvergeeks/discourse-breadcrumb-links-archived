@@ -11,12 +11,21 @@ api.onPageChange((url) => {
 
             // If on the homepage
             if (url === '/') {
-
+                $("#breadcrumbsContainer").append(`
+                    <li class="breadcrumb-item">
+                        <a href="https://story.pub"><i class="home">Homepage</i></a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        Community Home
+                    </li>
+                `);
             } else {
                 $("#breadcrumbsContainer").append(`
-
                     <li class="breadcrumb-item">
-                        <a href="/">Forum Home</a>
+                        <a href="https://story.pub"><i class="home">Homepage</i></a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/">Community Home</a>
                     </li>
                 `);
             }
