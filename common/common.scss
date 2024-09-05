@@ -36,6 +36,7 @@
       }
 
       &.active {
+display: none;
           color: var(--primary-medium);
           font-weight: bold;
       }
