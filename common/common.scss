@@ -11,6 +11,7 @@
       display: flex;
       align-items: center;
       padding-right: 0.5rem;
+      font-size: var(--font-up-1);
 
       & + .breadcrumb-item::before {
           content: "/";
