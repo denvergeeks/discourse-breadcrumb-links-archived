@@ -31,9 +31,10 @@ api.onPageChange((url) => {
                     if (response && response.category && response.category.name) {
                         const categoryTitle = response.category.name;
                         $("#breadcrumbsContainer").append(`
-                            <li class="breadcrumb-item active">
-                                ${categoryTitle}
-                            </li>
+                    // Hide the path to the current page
+                            // <li class="breadcrumb-item active">
+                            //    ${categoryTitle}
+                            // </li>
                         `);
                     }
                 },
@@ -66,9 +67,10 @@ api.onPageChange((url) => {
                                       <li class="breadcrumb-item">
                                           <a href="${categoryURL}">${categoryTitle}</a>
                                       </li>
-                                      <li class="breadcrumb-item active">
-                                          ${topicTitle}
-                                      </li>
+                                // Hide the path to the current page  
+                                     // <li class="breadcrumb-item active">
+                                     //     ${topicTitle}
+                                     // </li>
                                   `);
                               }
                           },
