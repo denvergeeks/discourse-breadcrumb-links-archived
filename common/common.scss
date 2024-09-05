@@ -20,6 +20,23 @@
           color: var(--primary-med-or-secondary-med);
           font-weight: normal;
       }
+
+
+
+    & + .breadcrumb-item::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -10px;
+    top: 27px;
+    border-top: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid var(--blend-primary-secondary-5);
+}
+
+
+      
     
       .home {
         position: relative;
