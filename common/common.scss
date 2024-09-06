@@ -15,9 +15,9 @@
       padding-right: 0.5rem;
       font-size: var(--font-up-1);
 
-:first-child:before
+
       
-      & + .breadcrumb-item:before {
+      & + .breadcrumb-item:first-child:before {
     content: "🡄";
     color: var(--tertiary);
     position: relative;
