@@ -16,7 +16,7 @@
       font-size: var(--font-up-1);
 
       & + .breadcrumb-item:before {
-    content: "";
+    content: "🡄";
     width: auto;
     height: auto;
     left: -10px;
