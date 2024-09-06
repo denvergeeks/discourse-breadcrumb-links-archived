@@ -15,7 +15,7 @@
       
     & + .breadcrumb-item::before {
       content: "🡄";
-      color: var(--tertiary);
+      color: var(--category-badge-color);
       }
 
       a {
