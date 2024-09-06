@@ -17,7 +17,7 @@
 
 
       
-      & + .breadcrumb-item:first-child:before {
+      & + .breadcrumb-item::before {
     content: "🡄";
     color: var(--tertiary);
     position: relative;
