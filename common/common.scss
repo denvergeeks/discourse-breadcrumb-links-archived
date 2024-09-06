@@ -16,8 +16,7 @@
     & + .breadcrumb-item::before {
       content: "🡄";
       color: var(--tertiary);
-      width: fit-content;
-      height: fit-content;
+
       }
 
       a {
