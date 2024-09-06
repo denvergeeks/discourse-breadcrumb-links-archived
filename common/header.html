@@ -32,7 +32,7 @@ api.onPageChange((url) => {
                         const categoryTitle = response.category.name;
                         $("#breadcrumbsContainer").append(`
                             <li class="breadcrumb-item active">
-                               🡄 ${categoryTitle}
+                               ${categoryTitle}
                             </li>
                         `);
                     }
@@ -67,7 +67,7 @@ api.onPageChange((url) => {
                                           <a href="${categoryURL}">${categoryTitle}</a>
                                       </li>
                                       <li class="breadcrumb-item active">
-                                          🡄 ${topicTitle}
+                                          ${topicTitle}
                                       </li>
                                   `);
                               }
