@@ -15,15 +15,18 @@
       padding-right: 0.5rem;
       font-size: var(--font-up-1);
 
-      & + .breadcrumb-item:before {
+      & + .breadcrumb-item::before {
     content: "🡄";
-    width: auto;
-    height: auto;
+          color: var(--tertiary);
+          position:relative;
+    width: 20px;
+    height: 20px;
     left: -10px;
-    top: 27px;
+          /*
     border-top: 10px solid rgba(0, 0, 0, 0);
     border-bottom: 10px solid rgba(0, 0, 0, 0);
     border-right: 10px solid var(--tertiary);
+          */
       }
 
 
