@@ -7,20 +7,6 @@
     border-radius: .25rem;
     width: fit-content;
 
-
-
-      & + #breadcrumbsContainer::before {
-    content: "";
-    width: auto;
-    height: auto;
-    left: -10px;
-    top: 27px;
-    border-top: 10px solid rgba(0, 0, 0, 0);
-    border-bottom: 10px solid rgba(0, 0, 0, 0);
-    border-right: 10px solid var(--tertiary);
-      }
-
-
     
 
   .breadcrumb-item {
