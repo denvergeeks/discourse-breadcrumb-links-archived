@@ -1,9 +1,11 @@
-### Importantly -- this currently only works correctly with Categories -- it does not handle Subcategories!
+### Importantly -- this does not (yet) display subcategories.
 
 How it looks on a Category List page...
 
-![discourse-breadcrumbs-theme-component](https://github.com/denvergeeks/discourse-breadcrumbs/assets/322529/21b9204e-d4b9-4ea4-8999-363dff21eb9b)
+![breadcrumbs-on-category](https://github.com/user-attachments/assets/1461232d-5856-49f6-b6e1-bc9c0656996d)
+
 
 How it looks on a Topic page...
 
-![discourse-breadcrumbs-theme-component-on-topic](https://github.com/denvergeeks/discourse-breadcrumb-links/assets/322529/9efd1bd6-b686-42d2-a60b-b74750ee1d02)
+![breadcrumbs-on-post](https://github.com/user-attachments/assets/4f4713f0-7e74-41ea-b015-88ddb7ead425)
+
