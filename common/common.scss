@@ -14,7 +14,7 @@
     font-size: var(--font-up-1);
       
     & + .breadcrumb-item::before {
-      content: "🡄";
+      content: "🡄 ";
       color: var(--tertiary);
       position: relative;
       width: fit-content;
