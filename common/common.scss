@@ -17,11 +17,11 @@
 
       & + .breadcrumb-item::before {
     content: "🡄";
-          color: var(--tertiary);
-          position:relative;
-    width: 20px;
-    height: 20px;
-    left: -10px;
+    color: var(--tertiary);
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    left: -.3rem;
           /*
     border-top: 10px solid rgba(0, 0, 0, 0);
     border-bottom: 10px solid rgba(0, 0, 0, 0);
