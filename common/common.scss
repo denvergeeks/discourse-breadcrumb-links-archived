@@ -16,7 +16,6 @@
     & + .breadcrumb-item::before {
       content: "🡄";
       color: var(--tertiary);
-
       }
 
       a {
@@ -31,7 +30,6 @@
       &.active {
           display: none;
           color: var(--primary-medium);
-          font-weight: bold;
       }
   }
 }
