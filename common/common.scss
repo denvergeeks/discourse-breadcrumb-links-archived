@@ -7,6 +7,22 @@
     border-radius: .25rem;
     width: fit-content;
 
+
+
+      & + #breadcrumbsContainer::before {
+    content: "";
+    width: auto;
+    height: auto;
+    left: -10px;
+    top: 27px;
+    border-top: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    border-right: 10px solid var(--tertiary);
+      }
+
+
+    
+
   .breadcrumb-item {
       display: flex;
       align-items: center;
@@ -34,17 +50,6 @@
         padding-right: 0;
       }
 
-            & + .home::before {
-    content: "";
-    width: auto;
-    height: auto;
-    left: -10px;
-    top: 27px;
-    border-top: 10px solid rgba(0, 0, 0, 0);
-    border-bottom: 10px solid rgba(0, 0, 0, 0);
-    border-right: 10px solid red;
-      }
-
       a {
           text-decoration: none;
           font-style: italic;
@@ -55,7 +60,7 @@
       }
 
       &.active {
-display: none;
+          display: none;
           color: var(--primary-medium);
           font-weight: bold;
       }
