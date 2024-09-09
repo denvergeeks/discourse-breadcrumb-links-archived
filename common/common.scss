@@ -15,7 +15,7 @@
     font-style: italic;
       
     & + .breadcrumb-item::before {
-      content: "🡄";
+      content: "<";
       color: var(--tertiary);
       padding: 0 0.5rem;
       }
