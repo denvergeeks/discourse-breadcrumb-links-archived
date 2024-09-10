@@ -1,3 +1,7 @@
+.static-login #above-main-container #breadcrumbsContainer {
+    display: none;
+}
+
 #breadcrumbsContainer {
   display: flex;
   flex-wrap: wrap;
