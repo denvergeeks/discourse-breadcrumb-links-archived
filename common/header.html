@@ -117,6 +117,10 @@ const updateBreadcrumbs = (url) => {
 
                                             // Append subcategory (or current category)
                                             $("#breadcrumbsContainer").append(`
+                                            
+                                <li class="breadcrumb-item">
+                                    <a href="${parentCategoryURL}">${parentCategoryTitle}</a>
+                                </li>
                                                 <li class="breadcrumb-item">
                                                     <a href="${categoryURL}">${categoryTitle}</a>
                                                 </li>
