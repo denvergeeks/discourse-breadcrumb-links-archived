@@ -16,6 +16,7 @@
     align-items: center;
     /* font-size: var(--font-up-1); */
     font-style: italic;
+    margin-bottom: .5rem;
       
     & + .breadcrumb-item::before {
       content: "<";
