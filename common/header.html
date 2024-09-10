@@ -4,15 +4,13 @@ api.onPageChange((url) => {
 });
 
 const updateBreadcrumbs = (url) => {
-    // Helper function to reset the breadcrumbs in the 'above-main-container' plugin outlet
+    // Helper function to reset the breadcrumbs container
     const resetBreadcrumbs = () => {
-        const $breadcrumbContainer = $("#plugin-outlet-above-main-container");
-        $breadcrumbContainer.empty();
+        $("#breadcrumbsContainer").empty();
         // If on the homepage
         if (url === '/') {
-            return;
         } else {
-            $breadcrumbContainer.append(`
+            $("#breadcrumbsContainer").append(`
                 <li class="breadcrumb-item">
                     <a class="home" href="/"><< Forum Home</a>
                 </li>
@@ -34,8 +32,6 @@ const updateBreadcrumbs = (url) => {
                     const categoryTitle = response.category.name;
                     const parentCategoryId = response.category.parent_category_id;
 
-                    const $breadcrumbContainer = $("#plugin-outlet-above-main-container");
-
                     if (parentCategoryId) {
                         // Fetch parent category details if it's a subcategory
                         $.ajax({
@@ -47,14 +43,14 @@ const updateBreadcrumbs = (url) => {
                                     const parentCategoryURL = `/c/${parentResponse.category.slug}`;
 
                                     // Append parent category first
-                                    $breadcrumbContainer.append(`
+                                    $("#breadcrumbsContainer").append(`
                                         <li class="breadcrumb-item">
                                             <a href="${parentCategoryURL}">${parentCategoryTitle}</a>
                                         </li>
                                     `);
 
                                     // Append subcategory after the parent
-                                    $breadcrumbContainer.append(`
+                                    $("#breadcrumbsContainer").append(`
                                         <li class="breadcrumb-item active">
                                            ${categoryTitle}
                                         </li>
@@ -67,7 +63,7 @@ const updateBreadcrumbs = (url) => {
                         });
                     } else {
                         // No parent category, just append the category
-                        $breadcrumbContainer.append(`
+                        $("#breadcrumbsContainer").append(`
                             <li class="breadcrumb-item active">
                                ${categoryTitle}
                             </li>
@@ -91,8 +87,6 @@ const updateBreadcrumbs = (url) => {
                     const topicTitle = response.title;
                     const categoryId = response.category_id;
 
-                    const $breadcrumbContainer = $("#plugin-outlet-above-main-container");
-
                     // Fetch the category name using the category ID
                     $.ajax({
                         type: "GET",
@@ -114,22 +108,22 @@ const updateBreadcrumbs = (url) => {
                                                 const parentCategoryURL = `/c/${parentResponse.category.slug}`;
 
                                                 // Append parent category first
-                                                $breadcrumbContainer.append(`
+                                                $("#breadcrumbsContainer").append(`
                                                     <li class="breadcrumb-item">
                                                         <a href="${parentCategoryURL}">${parentCategoryTitle}</a>
                                                     </li>
                                                 `);
-
-                                                // Append subcategory or current category
-                                                $breadcrumbContainer.append(`
-                                                    <li class="breadcrumb-item">
-                                                        <a href="${categoryURL}">${categoryTitle}</a>
-                                                    </li>
-                                                    <li class="breadcrumb-item active">
-                                                        ${topicTitle}
-                                                    </li>
-                                                `);
                                             }
+
+                                            // Append subcategory (or current category)
+                                            $("#breadcrumbsContainer").append(`
+                                                <li class="breadcrumb-item">
+                                                    <a href="${categoryURL}">${categoryTitle}</a>
+                                                </li>
+                                                <li class="breadcrumb-item active">
+                                                    ${topicTitle}
+                                                </li>
+                                            `);
                                         },
                                         error: function(error) {
                                             console.error("Error fetching parent category details for topic", error);
@@ -137,7 +131,7 @@ const updateBreadcrumbs = (url) => {
                                     });
                                 } else {
                                     // No parent category, just append the category and topic
-                                    $breadcrumbContainer.append(`
+                                    $("#breadcrumbsContainer").append(`
                                         <li class="breadcrumb-item">
                                             <a href="${categoryURL}">${categoryTitle}</a>
                                         </li>
@@ -159,5 +153,5 @@ const updateBreadcrumbs = (url) => {
             }
         });
     }
-};
+}
 </script>
