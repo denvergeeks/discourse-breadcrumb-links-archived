@@ -1,2 +1,4 @@
 en:
-  author: "Author"
+  theme_metadata:
+    description: "Text for Home Link"
+  breadcrumb_links_home_text: "Home"
